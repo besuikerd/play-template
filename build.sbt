@@ -1,5 +1,14 @@
-name := """playtest"""
+lazy val core = (project in file(".")).enablePlugins(PlayScala)
 
-version := "1.0-SNAPSHOT"
+scalaVersion := "2.11.6"
 
-lazy val core = (project in file("core"))
+libraryDependencies ++= Seq(
+  jdbc,
+  cache,
+  ws,
+  specs2 % Test
+)
+
+sbtPlugin := true
+
+routesGenerator := InjectedRoutesGenerator
