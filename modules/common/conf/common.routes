@@ -1,0 +1,5 @@
+GET /                       controllers.common.Application.index()
+
+GET /index                  controllers.common.Application.index()
+
+GET /assets/*file           controllers.common.Assets.at(path="/public/lib/common", file)

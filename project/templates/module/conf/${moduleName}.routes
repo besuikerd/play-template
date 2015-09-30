@@ -1,3 +1,0 @@
-GET /index                  controllers.template.Application.index()
-
-GET /assets/*file           controllers.template.Assets.at(path="/public/lib/template", file)
